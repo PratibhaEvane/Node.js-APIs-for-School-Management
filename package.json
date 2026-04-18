@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "start": "node app.js"
+>>>>>>> e2b204578e629e19cfc39851e5ce964848844056
   },
   "keywords": [],
   "author": "",
