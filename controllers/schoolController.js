@@ -19,7 +19,7 @@ exports.addSchool = (req, res) => {
 
     db.query(query, [name, address, latitude, longitude], (err, result) => {
         if (err) {
-            return res.status(500).json({ error: err });
+            return res.status(500).json({ error: err?.message || "Database error" });
         }
         res.json({ message: "School added successfully" });
     });
