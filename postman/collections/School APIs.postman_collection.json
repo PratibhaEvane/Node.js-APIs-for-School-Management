@@ -1,0 +1,213 @@
+{
+  "info": {
+    "_postman_id": "bc13e766-c2eb-4d48-88fe-b77d5416509c",
+    "name": "School APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "id": "9de2cc2a-204d-44ff-a0d1-8b4b91954e48",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/listSchools?latitude=28.6&longitude=77.2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "28.6"
+            },
+            {
+              "key": "longitude",
+              "value": "77.2"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "c5a0acbe-bfcb-4fc0-8453-82827bb2fbca",
+          "name": "Get API",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/listSchools?latitude=28.6&longitude=77.2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "listSchools"
+              ],
+              "query": [
+                {
+                  "key": "latitude",
+                  "value": "28.6",
+                  "uuid": "faca7fa6-f5e1-48a2-9791-ccab011a1977"
+                },
+                {
+                  "key": "longitude",
+                  "value": "77.2",
+                  "uuid": "f27d4c6d-5568-4809-82a0-83aadf52800a"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "348"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"15c-RC11MhUsInv7zTNNPw0rs0rX7vc\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 18 Apr 2026 10:23:10 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "responseTime": "2026-04-18T10:23:17.907Z",
+          "body": "[\n    {\n        \"id\": 1,\n        \"name\": \"ABC School\",\n        \"address\": \"Delhi\",\n        \"latitude\": 28.6139,\n        \"longitude\": 77.209,\n        \"distance\": 1.7778706507998516\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Jcob School\",\n        \"address\": \"Delhi\",\n        \"latitude\": 28.6139,\n        \"longitude\": 77.209,\n        \"distance\": 1.7778706507998516\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Jcob School\",\n        \"address\": \"Noida\",\n        \"latitude\": 28.6139,\n        \"longitude\": 77.209,\n        \"distance\": 1.7778706507998516\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "New Request",
+      "id": "66c29193-babd-4025-9848-c0e4d1c02b0c",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Jcob School\",\r\n  \"address\": \"Noida\",\r\n  \"latitude\": 28.6139,\r\n  \"longitude\": 77.2090\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/addSchool",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "addSchool"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "c24b83e1-6251-4ec2-b4a1-4f086a28c848",
+          "name": "Post API",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Jcob School\",\r\n  \"address\": \"Noida\",\r\n  \"latitude\": 28.6139,\r\n  \"longitude\": 77.2090\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/addSchool",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "addSchool"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "39"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"27-e27XTLiHrzg6WCmngvmwAacaXO0\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 18 Apr 2026 10:26:39 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "responseTime": "2026-04-18T10:26:45.386Z",
+          "body": "{\n    \"message\": \"School added successfully\"\n}"
+        }
+      ]
+    }
+  ]
+}
