@@ -6,10 +6,14 @@ exports.addSchool = (req, res) => {
     const { name, address, latitude, longitude } = req.body;
 
     // Validation
-    if (!name || !address || !latitude || !longitude) {
+    if (
+        name == null ||
+        address == null ||
+        latitude == null ||
+        longitude == null
+    ) {
         return res.status(400).json({ message: "All fields are required" });
     }
-
     const query =
         "INSERT INTO schools (name, address, latitude, longitude) VALUES (?, ?, ?, ?)";
 
@@ -24,11 +28,10 @@ exports.addSchool = (req, res) => {
 // ➤ List Schools API (sorted by distance)
 exports.listSchools = (req, res) => {
     const { latitude, longitude } = req.query;
-
-    if (!latitude || !longitude) {
+  
+    if (latitude == null || longitude == null) {
         return res.status(400).json({ message: "Latitude & Longitude required" });
     }
-
     db.query("SELECT * FROM schools", (err, results) => {
         if (err) return res.status(500).json({ error: err });
 
